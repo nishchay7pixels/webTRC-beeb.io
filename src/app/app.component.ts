@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import {Component, ElementRef, OnChanges, OnInit, ViewChild} from '@angular/core';
+import { Instance, SignalData } from 'simple-peer';
+import {ConnectionService} from "./connection.service";
+import {isEmpty} from "rxjs/operators";
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'webTRC-one';
+  @ViewChild('alert', { static: true }) alert: ElementRef;
+  onNotify(message:string):void {
+    this.alert.nativeElement.classList.add('show');
+  }
 }
