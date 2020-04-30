@@ -1,0 +1,11 @@
+<div class="form-group">
+  <h5 class="room-id">Room ID: {{roomid}}</h5>
+</div>
+<div class="form-group">
+  <button *ngIf="peer2Status" (click)="connect()"  class="btnSubmit">Begin</button>
+</div>
+<div class="form-group">
+  <button (click)="message()" class="btnSubmit" *ngIf="connected">Message</button>
+</div>
+
+

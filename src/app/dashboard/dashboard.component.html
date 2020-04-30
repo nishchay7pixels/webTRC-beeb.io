@@ -1,0 +1,29 @@
+<div class="container" >
+  <div #alert class="alert alert-primary" role="alert">
+    This is a primary alert—check it out!
+  </div>
+</div>
+
+
+<div class="container login-container">
+  <div class="row">
+    <div class="col-md-6 login-form-1">
+      <div class="form-group">
+        <h3>My Room</h3><app-create-room (notify)='onNotify($event)'></app-create-room>
+      </div>
+
+
+    </div>
+    <div class="col-md-6 login-form-2">
+      <div class="login-logo">
+        <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
+      </div>
+      <h3>Join Room</h3>
+      <app-join-room></app-join-room>
+      <div class="form-group">
+        <a href="#" class="btnForgetPwd" value="Login">Forget Password?</a>
+      </div>
+    </div>
+  </div>
+</div>
+

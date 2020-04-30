@@ -1,0 +1,15 @@
+<div class="form-group">
+  <input type="text" [(ngModel)]="connecttopeer" *ngIf="!connected" class="form-control" placeholder="Room Id" value="" />
+</div>
+<div class="form-group">
+  <button class="btnSubmit" (click)="connect()" *ngIf="!connected">Connect</button>
+</div>
+<div class="form-group">
+  <button class="btnSubmit" (click)="message()" *ngIf="connected">Message</button>
+</div>
+
+<br>
+
+<h5 *ngIf="connected" class="room-id">Connected to Room : {{connecttopeer}}</h5>
+
+
